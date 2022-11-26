@@ -4,6 +4,7 @@
 
 
 
+
  * {
     box-sizing: border-box;
     margin: 0;
@@ -17,6 +18,9 @@
 
  .hero{
     background-color: $mylight;
+    background-image: url("../images/tile8.jpg");
+    background-repeat: repeat;
+    background-size: 2000px 1200px;
 
     &__container{
         display: grid;
@@ -51,7 +55,7 @@
         
         &--left h1 {
             font-size: 4rem;
-            color: $dark;
+            color: $mywhite;
 
             @include mobile {
                 font-size: 1.5rem;
@@ -68,7 +72,7 @@
         }
         &--left p {
             font-size: 2rem;
-            color: $dark;
+            color: $mywhite;
             margin-top: 1rem;
             font-weight: 700;
 
@@ -127,6 +131,39 @@
     }
  }
 
+ .about__section {
+    padding: 60px 60px;
+    background: $mylight;
+    color: $dark;
+ }
+
+ .about__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $mylight;
+ }
+
+ .about__container h1 {
+    font-size: 3rem;
+    color: $dark;
+    margin-bottom: 32px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+ }
+
+ .about__text {
+    line-height: 2.3;
+    color: $dark;
+    font-size: 20px;
+    font-weight: 350;
+    display: inline-block;
+    text-align: center;
+ }
+
+
  .main__section {
     padding: 60px 60px;
     background: $mylight;
@@ -141,7 +178,7 @@
  }
 
  .main__container h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: $dark;
     margin-bottom: 32px;
     display: grid;
@@ -154,6 +191,58 @@
     line-height: 2.3;
     color: $dark;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 350;
     display: inline-block;
+    text-align: center;
  }
+
+ .social-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+ 
+ .fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+   .fa:hover {
+      opacity: 0.7;
+  }
+   .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+   .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+   .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+   .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+   .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    padding: 20px 25px;
+ }
+
+ footer {
+    clear: both;
+    text-align: center;
+    padding: 3em;
+}
+

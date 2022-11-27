@@ -2,6 +2,13 @@
 @import 'colors';
 @import 'media-queries';
 
+@font-face {
+    font-family: 'henrymorganhandregular';
+    src: url('/src/fonts/HenryMorganHand-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 
@@ -196,10 +203,18 @@
     text-align: center;
  }
 
+ .social-section{
+    padding: 60px 60px;
+    background: $mylight;
+ }
+
  .social-container {
     display: flex;
     justify-content: space-evenly;
+    background-color: $mylight;
   }
+
+
  
  .fa {
     padding: 20px;
@@ -208,6 +223,9 @@
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+
   }
    .fa:hover {
       opacity: 0.7;
@@ -241,8 +259,10 @@
  }
 
  footer {
+    background: $darkbrown;
     clear: both;
     text-align: center;
-    padding: 3em;
+    padding: 1em;
+    color: $mywhite;
 }
 

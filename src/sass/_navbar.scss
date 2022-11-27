@@ -1,6 +1,15 @@
 @import 'colors';
 @import 'media-queries';
 
+@font-face {
+    font-family: 'henrymorganhandregular';
+    src: url('/src/fonts/HenryMorganHand-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 %align-center {
 display:flex;
 align-items: center;
@@ -23,10 +32,10 @@ position: relative;
 color: white;
 cursor: pointer;
 text-decoration: none;
-font-size: 2rem;
+font-size: 3rem;
 margin-left: 24px;
 font-style: italic;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'henrymorganhandregular';
 @extend %align-center;
 }
 

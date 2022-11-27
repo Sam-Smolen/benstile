@@ -2,11 +2,10 @@
 
 .container {
     background: #fff;
-    max-width: 800px;
+    width: 50%;
     padding: 25px 40px 10px 40px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    display: grid;
-    margin: auto;
+    float: right;
 }
 
 .container .text {
@@ -65,3 +64,30 @@ form .form-row .text-area {
     bottom: 40px;
     background: #fff;
 }
+
+.contact__container {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    min-height: 401.67px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.contact__container h1 {
+    font-size: 35px;
+    color: $dark;
+    margin-bottom: 32px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+ }
+
+ .contact__text {
+    line-height: 2.3;
+    color: $dark;
+    font-size: 20px;
+    font-weight: 350;
+    text-align: center;
+ }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <base href="/">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="css/style.css">
@@ -19,7 +19,7 @@
     <!-- contact form -->
     <div class="container">
         <div class="text">Contact Form</div>
-        <form action="#">
+        <form action="contactme.php" method="post">
             <div class="form-row">
                 <div class="input-data">
                     <input type="text" required>
@@ -51,6 +51,9 @@
                     <label>Write your message here</label>
             </div>
         </div>
+        
+        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+        
         <div class="form-row submit-btn">
             <div class="input-data">
                 <div class="inner"></div>

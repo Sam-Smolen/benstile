@@ -13,13 +13,13 @@
 </head>
 <body id="secondPage">
     <!-- navbar -->
-    
+
        <!-- About section -->
      
     <!-- contact form -->
     <div class="container">
         <div class="text">Contact Form</div>
-        <form action="" method="post">
+        <form action="contactme.php" method="post">
             <div class="form-row">
                 <div class="input-data">
                     <input type="text" name="firstname" required>
@@ -72,23 +72,23 @@
         $phone = $_POST['phone'];
         $user_message = $_POST['message'];
 
-        $email_from = 'noreply@samsmolen.com';
+        $email_from = 'sam.smolen15@gmail.com';
         $email_subject = 'New Form Submission';
-        $email_body = "Firstname: $First_name.\n "
-                        "Lastname: $Last_name.\n "
-                        "Email id: $user_email.\n"
-                        "Phone No: $phone.\n";
+        $email_body = "Firstname: $First_name.\n".
+                        "Lastname: $Last_name.\n".
+                        "Email id: $user_email.\n".
+                        "Phone No: $phone.\n".
                         "User Message: $user_message.\n";
         
         $to_email ="sam.smolen@icloud.com";
-        $headers = "From: $email_from" \r\n;
-        $headers .= "Reply: $email_from" \r\n;
+        $headers = "From: $email_from \r\n";
+        $headers .= "Reply: $email_from \r\n";
 
 
         $secretKey = "6Lc9dJQiAAAAABGR8YYWQPDEe4rO4oUwIpFtgx3a";
         $responseKey = $_POST['g-recaptcha-response'];
         $UserIP = $_SERVER['REMOTE_ADDR'];
-        $url = "https://www.google.com/recaptcha/api/siteverify?
+        $url = "https://www.google.com/recaptcha/api/siteverify? METHOD: POST
         secret=$secretKey&response=$responseKey&remoteip=$userIP";
 
         $response = file_get_contents($url);

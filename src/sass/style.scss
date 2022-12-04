@@ -3,7 +3,6 @@
 @import 'media-queries';
 @import 'forms';
 
-
 @font-face {
     font-family: 'henrymorganhandregular';
     src: url('/src/fonts/HenryMorganHand-webfont.woff') format('woff');
@@ -22,7 +21,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
 
- #firstPage {
+ body {
     background: $mylight;
  }
 

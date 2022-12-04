@@ -93,6 +93,7 @@
   max-width: 800px;
   padding: 25px 40px 10px 40px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
 .container .text {
@@ -265,7 +266,7 @@ form .form-row .text-area {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#firstPage {
+body {
   background: #e6e2d3;
 }
 
@@ -504,4 +505,6 @@ footer {
   text-align: center;
   padding: 1em;
   color: #FFFAFA;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -160,3 +160,17 @@ form .form-row .text-area {
         width: 40%!important;
     }
 }
+
+.g-recaptcha {
+    margin: 10px 20px;
+}
+
+.status {
+    font-size: 15px;
+    color: green;
+    padding: 15px;
+}
+
+.status span {
+    color: red;
+}

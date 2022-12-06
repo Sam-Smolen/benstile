@@ -55,7 +55,7 @@
    <!-- img gallery -->
    <section>
    <div class="carousel">
-    <button class="carousel__button carousel__button--left">
+    <button class="carousel__button carousel__button--left" onclick="plusSlides(-1)">
         <img src="images/carousel-imgs/carousel-left.svg" alt="Arrow left">
     </button>
         <div class="carousel__track-container">
@@ -71,17 +71,51 @@
                 </li>
             </ul>
         </div>
-        <button class="carousel__button carousel__button--right">
-            <img src="images/carousel-imgs/carousel-right.svg" alt="Arrow rightt">
+        <button class="carousel__button carousel__button--right" onclick="plusSlides(1)">
+            <img src="images/carousel-imgs/carousel-right.svg" alt="Arrow right">
         </button>
 
         <div class="carousel__nav">
-            <button class="carousel__indicator current-slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator current-slide" onclick="currentSlide(1)"></button>
+            <button class="carousel__indicator" onclick="currentSlide(2)"></button>
+            <button class="carousel__indicator" onclick="currentSlide(3)"></button>
         </div>
     </div>
 </section>
+<!-- Slideshow container -->
+<!--div class="slideshow-container">
+
+    
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/jpgs/tile6.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/jpgs/tile7.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/jpgs/tile9.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+  
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>-->
    <!-- Main section -->
    <div class="main__section">
     <div class="main__container">
@@ -103,6 +137,41 @@
     <div><a href="#" class="fa fa-snapchat-ghost"></a></div>
 </div>
    </div>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+ console.log("plusSlides called")
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  console.log("currentSlide called")
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    console.log('showSlides called:' + n)
+  let i;
+  //let slides = document.getElementsByClassName("mySlides");
+  let slides = document.getElementsByClassName("carousel__slide");
+  console.log("slides.size:" + slides.size)
+  let dots = document.getElementsByClassName("carousel__indicator");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 <!-- footer -->
 <footer>
     <p><small>&copy; 2022-<span id="this-year"></span> by 
@@ -111,7 +180,5 @@
         <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
    </p>
   </footer>
-
-
 </body>
 </html>
